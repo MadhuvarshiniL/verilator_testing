@@ -1,24 +1,15 @@
-# Verilator D Flip-Flop Simulation
+# Verilator D Flip-Flop Project
 
-## 📌 Overview
-This project demonstrates basic Verilator-based simulation using a D Flip-Flop (DFF).  
-The design is written in Verilog and simulated using a C++ testbench (wrapper).
+## Description
+This project demonstrates a D Flip-Flop with reset and enable using Verilator.
 
----
+## Features
+- Cycle-accurate simulation
+- C++ testbench
+- Waveform generation (VCD)
 
-## 🎯 Objectives
-- Understand Verilator simulation flow
-- Learn cycle-accurate simulation
-- Use C++ wrapper to drive the design
-- Apply input vectors and observe outputs
-
----
-
-## 🛠️ Tools Used
-- Verilator (RTL to C++ conversion)
-- g++ (compilation)
-- Linux / WSL environment
-
----
-
-## 📂 Project Structure
+## Run
+verilator -Wall --trace -cc dff.v --exe sim_main.cpp
+make -C obj_dir -f Vdff.mk Vdff
+./obj_dir/Vdff
+gtkwave wave.vcd
