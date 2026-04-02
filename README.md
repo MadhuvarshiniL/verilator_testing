@@ -1,12 +1,11 @@
-# Verilator D Flip-Flop Project
+# Verilator D Flip-Flop
 
 ## Description
-This project demonstrates a D Flip-Flop with reset and enable using Verilator.
+D Flip-Flop with enable and reset simulated using Verilator.
 
-## Features
-- Cycle-accurate simulation
-- C++ testbench
-- Waveform generation (VCD)
+## Files
+- dff.v : RTL design
+- sim_main.cpp : C++ testbench
 
 ## Run
 verilator -Wall --trace -cc dff.v --exe sim_main.cpp
